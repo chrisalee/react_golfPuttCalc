@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+// import { useState } from "react";
+import "./App.css";
+// import data from "./data";
+import UserChoices from "./components/UserChoices";
+import WheelMap from "./components/WheelMap";
 
-function App() {
+const App = ({currentSkillLevel, distanceFromHole}) => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{margin: "20px"}}>
+      <UserChoices  />
+      <WheelMap currentSkillLevel={currentSkillLevel} distanceFromHole={distanceFromHole}/>
     </div>
   );
 }
